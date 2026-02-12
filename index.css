@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-brand-dark: #050b14;
+    --color-brand-card: #0f172a;
+    --color-brand-neonBlue: #22d3ee;
+    --color-brand-neonPink: #e879f9;
+    --color-brand-accent: #06b6d4;
+
+    --font-sans: 'Inter', sans-serif;
+    --font-display: 'Montserrat', sans-serif;
+}
+
+@layer utilities {
+    .neon-text {
+        text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+    }
+
+    .neon-box {
+        box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+    }
+
+    .gradient-text {
+        background: linear-gradient(to right, #22d3ee, #e879f9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
