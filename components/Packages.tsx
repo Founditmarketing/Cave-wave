@@ -117,7 +117,7 @@ const PackageCard: React.FC<{ pkg: any; isUnlimited: boolean }> = ({ pkg, isUnli
       </ul>
 
       <a
-        href="https://cave-wave.vercel.app/buy-now"
+        href="https://cavewavecw.app.rinsed.co/checkout_forms/1"
         className={`block w-full py-4 rounded-full font-black uppercase tracking-widest text-sm text-white bg-gradient-to-r from-brand-neonBlue via-brand-neonPink to-brand-neonBlue bg-[length:200%_auto] hover:bg-right transition-all duration-500 shadow-[0_0_20px_rgba(34,211,238,0.5)] hover:shadow-[0_0_30px_rgba(232,121,249,0.6)] transform hover:-translate-y-1 text-center`}
       >
         Choose {pkg.name.split(' ')[0]}
