@@ -104,7 +104,7 @@ const ReviewsPage: React.FC = () => {
                         <p className="text-slate-300 mb-8 max-w-lg mx-auto">
                             Share your experience with us! We appreciate your feedback and look forward to serving you again.
                         </p>
-                        <a href="https://google.com" target="_blank" rel="noreferrer" className="inline-block px-10 py-4 bg-white text-black font-bold uppercase tracking-widest rounded-full hover:bg-brand-neonBlue hover:text-white transition-colors">
+                        <a href="https://www.google.com/maps/place/Cave+Wave+Car+Wash/@33.6614557,-96.6226178,9z/data=!4m10!1m2!2m1!1scave+wave+car+wash+reviews!3m6!1s0x863441d0725267d3:0xddb1ca6a8f4fc548!8m2!3d33.4599724!4d-94.0909297!15sChpjYXZlIHdhdmUgY2FyIHdhc2ggcmV2aWV3cyICOAGSAQhjYXJfd2FzaOABAA!16s%2Fg%2F11jt3gnvw6?entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" className="inline-block px-10 py-4 bg-white text-black font-bold uppercase tracking-widest rounded-full hover:bg-brand-neonBlue hover:text-white transition-colors">
                             Leave a Review
                         </a>
                     </div>
