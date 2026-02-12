@@ -14,6 +14,7 @@ import FastPass from './src/pages/FastPass';
 import Careers from './src/pages/Careers';
 import Contact from './src/pages/Contact';
 import LocationsPage from './src/pages/LocationsPage';
+import PrivacyPolicy from './src/pages/PrivacyPolicy';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -60,6 +61,7 @@ function App() {
             <Route path="/packages/*" element={<PackagesPage />} /> {/* Catch-all for sub-routes redirecting to main list */}
             <Route path="/locations" element={<LocationsPage />} />
             <Route path="/reviews" element={<ReviewsPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
 
