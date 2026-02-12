@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Briefcase, Users, Zap } from 'lucide-react';
+import EmploymentApplicationForm from '../components/EmploymentApplicationForm';
 
 const Careers: React.FC = () => {
     useEffect(() => {
@@ -48,23 +49,8 @@ const Careers: React.FC = () => {
                     ))}
                 </div>
 
-                <div className="bg-brand-dark rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-brand-neonPink/20 blur-[80px] rounded-full pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-neonBlue/20 blur-[80px] rounded-full pointer-events-none"></div>
-
-                    <div className="relative z-10">
-                        <h2 className="text-3xl font-black uppercase text-white mb-6">Ready to Apply?</h2>
-                        <p className="text-slate-300 max-w-xl mx-auto mb-8 text-lg">
-                            We are currently hiring for Site Attendants and Manager Trainees at all locations.
-                        </p>
-                        <a
-                            href="mailto:jobs@cavewave.com"
-                            className="inline-block px-10 py-5 rounded-full font-black uppercase tracking-widest text-brand-dark bg-white hover:bg-brand-neonBlue hover:text-white transition-all duration-300 shadow-lg transform hover:scale-105"
-                        >
-                            Apply Now
-                        </a>
-                        <p className="mt-4 text-sm text-slate-500 uppercase font-bold tracking-wider">Email your resume to jobs@cavewave.com</p>
-                    </div>
+                <div className="mt-20">
+                    <EmploymentApplicationForm />
                 </div>
             </div>
         </div>
