@@ -84,7 +84,7 @@ const MobileSpeedometer: React.FC<MobileSpeedometerProps> = ({ packages }) => {
             </div>
 
             {/* Selected Package Card */}
-            <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border-2 transition-all duration-300 relative animate-in fade-in slide-in-from-bottom-4"
+            <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border-2 transition-all duration-300 relative"
                 style={{ borderColor: activeIndex === 0 ? '#38bdf8' : activeIndex === 1 ? '#6366f1' : activeIndex === 2 ? '#d946ef' : '#22d3ee' }}
             >
                 {packages[activeIndex].isBestValue && (
@@ -95,7 +95,7 @@ const MobileSpeedometer: React.FC<MobileSpeedometerProps> = ({ packages }) => {
                     <h2 className="text-3xl font-black uppercase mb-2 text-shadow-sm">{packages[activeIndex].name}</h2>
 
                     {/* PRICING: SHOW BOTH */}
-                    <div className="grid grid-cols-2 gap-4 mt-4 bg-white/20 rounded-xl p-2 backdrop-blur-sm">
+                    <div className="grid grid-cols-2 gap-4 mt-4 bg-white/20 rounded-xl p-2">
                         <div className="flex flex-col items-center">
                             <span className="text-xs font-bold uppercase opacity-90">Single</span>
                             <span className="text-2xl font-black">${packages[activeIndex].singlePrice}</span>
