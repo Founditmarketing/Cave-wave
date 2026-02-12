@@ -125,7 +125,7 @@ const MobileSpeedometer: React.FC<MobileSpeedometerProps> = ({ packages }) => {
                     </ul>
 
                     <a
-                        href="/buy-now"
+                        href="https://cavewavecw.app.rinsed.co/checkout_forms/1"
                         className={`block w-full text-center py-4 rounded-full font-black uppercase tracking-widest text-white shadow-lg bg-gradient-to-r ${packages[activeIndex].color} bg-[length:200%_auto] hover:bg-right hover:shadow-xl transform active:scale-95 transition-all duration-300`}
                     >
                         Choose {packages[activeIndex].name}
