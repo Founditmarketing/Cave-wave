@@ -21,13 +21,13 @@ const MegaWave: React.FC = () => {
                     <div className="p-8 md:p-12 space-y-8">
                         <div>
                             <h2 className="text-2xl font-black uppercase dark:text-white text-slate-900 mb-4">Protect Your Paintwork from Chipping</h2>
-                            <h3 className="text-lg font-bold text-blue-600 uppercase mb-4">Request Carbauba wax application services in Paris, TX or Texarkana, TX</h3>
+                            <h3 className="text-lg font-bold text-blue-600 uppercase mb-4">Request Carbauba wax application services today</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 Constant sun exposure or wear and tear from road debris can cause the paint job of your vehicle to get chipped and pitted.
                                 In order to keep your car looking its best, you'll need to give the exterior a protective wax coating.
                             </p>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-4">
-                                Cave Wave Car Wash provides Carnauba wax application services at both our Paris, TX and Texarkana locations. We use Carnauba wax because...
+                                Cave Wave Car Wash provides Carnauba wax application services at all our locations. We use Carnauba wax because...
                             </p>
                             <ul className="mt-4 space-y-2">
                                 {['It enhances your paintwork', 'It resists UV rays, heat and moisture', 'It protects surfaces from environmental contaminants and debris'].map((item, i) => (

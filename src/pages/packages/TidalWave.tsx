@@ -21,13 +21,13 @@ const TidalWave: React.FC = () => {
                     <div className="p-8 md:p-12 space-y-8">
                         <div>
                             <h2 className="text-2xl font-black uppercase dark:text-white text-slate-900 mb-4">Keep Your Car Spotless - Automatically</h2>
-                            <h3 className="text-lg font-bold text-brand-neonPink uppercase mb-4">Enroll in our monthly car wash services in Paris, TX or Texarkana, TX</h3>
+                            <h3 className="text-lg font-bold text-brand-neonPink uppercase mb-4">Enroll in our monthly car wash services today</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 Keeping your car clean can feel like a never-ending battle. If you're tired of spending every weekend scrubbing your car clean, it's time to enroll in monthly car wash services.
                                 Cave Wave Car Wash will keep your vehicle spotless with our <strong>$49.99 Tidal Wave cleaning package</strong>.
                             </p>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-4">
-                                We'll complete a detailed washing process and apply a ceramic coating for cars in Paris, TX area. Live closer to Texarkana? You'll find a Cave Wave Car Wash there too!
+                                We'll complete a detailed washing process and apply a ceramic coating for your car.
                                 Visit one of our car wash locations today to sign up for the Tidal Wave package.
                             </p>
                         </div>

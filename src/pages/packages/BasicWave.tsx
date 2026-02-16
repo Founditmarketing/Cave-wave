@@ -21,13 +21,13 @@ const BasicWave: React.FC = () => {
                     <div className="p-8 md:p-12 space-y-8">
                         <div>
                             <h2 className="text-2xl font-black uppercase dark:text-white text-slate-900 mb-4">Don't Break the Bank to Keep Your Car Clean</h2>
-                            <h3 className="text-lg font-bold text-brand-neonBlue uppercase mb-4">Schedule basic car washing services in Paris, TX or Texarkana, TX</h3>
+                            <h3 className="text-lg font-bold text-brand-neonBlue uppercase mb-4">Schedule basic car washing services today</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 If you need to clean your vehicle often, the cost of every wash can add up fast. Luckily, you don't have to pay an arm and a leg for frequent trips to the car wash.
-                                Cave Wave Car Wash offers a monthly basic car wash service plan to clients in Paris, TX, or Texarkana, TX.
+                                Cave Wave Car Wash offers a monthly basic car wash service plan to clients at all our locations.
                             </p>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-4">
-                                For just <strong>$24.99 a month</strong>, you can keep your car clean and new looking. We also offer monthly packages at our Texarkana location.
+                                For just <strong>$24.99 a month</strong>, you can keep your car clean and new looking.
                                 Learn more about our monthly foaming car wash services.
                             </p>
                         </div>

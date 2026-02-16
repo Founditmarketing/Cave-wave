@@ -21,17 +21,17 @@ const SplashWave: React.FC = () => {
                     <div className="p-8 md:p-12 space-y-8">
                         <div>
                             <h2 className="text-2xl font-black uppercase dark:text-white text-slate-900 mb-4">Give Your Car a Thorough Cleaning</h2>
-                            <h3 className="text-lg font-bold text-blue-500 uppercase mb-4">We offer car wheel cleaning services in Paris, TX and Texarkana, TX</h3>
+                            <h3 className="text-lg font-bold text-blue-500 uppercase mb-4">We offer car wheel cleaning services at all locations</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 Tired of having caked-on mud in your tire treads and around your rims? Turn to Cave Wave Car Wash for help.
                                 Our Splash Wave package includes car wheel cleaning services to give your vehicle extra detailed shine.
                             </p>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-4">
                                 You'll also have access to our tri-colored falls and high-pressure side blasters. Plus, the Splash Wave package includes a tire and wheel cleaning and the application of a clear coat protectant.
-                                Our car wash in Paris, TX and Texarkana, TX has everything you need to get your car squeaky-clean.
+                                Our car wash has everything you need to get your car squeaky-clean.
                             </p>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-4 font-bold">
-                                Enroll in our Splash Wave package today for just $29.99 a month. Cleaning packages are also available at our Texarkana location.
+                                Enroll in our Splash Wave package today for just $29.99 a month.
                             </p>
                         </div>
 
