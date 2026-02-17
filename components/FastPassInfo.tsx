@@ -26,7 +26,7 @@ const FastPassInfo: React.FC = () => {
             </div>
 
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-lg transition-colors">
-              Skip the line and keep your ride shining all month long with our RFID-enabled FastPass membership.
+              Skip the line and keep your ride shining all month long with our LPR-enabled FastPass membership.
             </p>
 
             <div className="space-y-6 pt-2">
@@ -38,7 +38,7 @@ const FastPassInfo: React.FC = () => {
               <FeatureRow
                 icon={<ShieldCheck size={20} />}
                 title="Contactless Entry"
-                desc="RFID tag automatically recognizes your vehicle."
+                desc="LPR automatically recognizes your vehicle (no tags needed)."
               />
               <FeatureRow
                 icon={<Clock size={20} />}
