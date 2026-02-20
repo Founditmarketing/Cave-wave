@@ -44,7 +44,7 @@ export default async function handler(req: any, res: any) {
 
         const { data, error } = await resend.emails.send({
             from: 'system@cavewavecarwash.com',
-            to: 'info@cavewave.com',
+            to: 'cavewavewash00@gmail.com',
             replyTo: email,
             subject: emailSubject,
             html: htmlContent,
