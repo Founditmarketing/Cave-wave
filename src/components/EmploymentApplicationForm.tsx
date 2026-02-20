@@ -26,7 +26,7 @@ const EmploymentApplicationForm: React.FC = () => {
 
     const [resume, setResume] = useState<File | null>(null);
     const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: 0 });
-    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [errors, setErrors] = useState<Record<string, string>>({});
 
     // --- CAPTCHA Logic ---
@@ -115,30 +115,14 @@ const EmploymentApplicationForm: React.FC = () => {
             return;
         }
 
-        // Real Submission
-        setSubmissionStatus('loading');
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    ...formData,
-                    name: `${formData.firstName} ${formData.lastName}`,
-                    type: 'careers'
-                }),
-            });
+        // Mock Submission
+        setSubmissionStatus('success');
+        console.log('Form Submitted:', { ...formData, resume });
 
-            if (response.ok) {
-                setSubmissionStatus('success');
-            } else {
-                setSubmissionStatus('error');
-            }
-        } catch (error) {
-            console.error('Submission error:', error);
-            setSubmissionStatus('error');
-        }
+        // Reset form after success (optional, keeping it simple for now)
+        // setFormData(...initialState);
+        // setResume(null);
+        // generateCaptcha();
     };
 
     if (submissionStatus === 'success') {
@@ -420,17 +404,9 @@ const EmploymentApplicationForm: React.FC = () => {
 
                         <button
                             type="submit"
-                            disabled={submissionStatus === 'loading'}
-                            className="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-brand-neonPurple to-brand-neonPink text-white text-lg font-black uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-brand-neonPink/30 hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-3"
+                            className="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-brand-neonPurple to-brand-neonPink text-white text-lg font-black uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-brand-neonPink/30 hover:-translate-y-1 transition-all duration-300"
                         >
-                            {submissionStatus === 'loading' ? (
-                                <>
-                                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                                    <span>Sending...</span>
-                                </>
-                            ) : (
-                                <span>Submit</span>
-                            )}
+                            Submit
                         </button>
                     </div>
                 </div>
