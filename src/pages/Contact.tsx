@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 {/* Full Width Map */}
-                <div className="bg-slate-200 dark:bg-slate-800 rounded-3xl shadow-2xl overflow-hidden h-[500px] relative border-4 border-white dark:border-slate-800">
+                <div className="bg-slate-200 dark:bg-slate-800 rounded-3xl shadow-2xl overflow-hidden h-[500px] relative border-4 border-white dark:border-slate-800 mb-20">
                     {activeMap && (
                         <iframe
                             key={activeLocation} // Force re-render on change
@@ -126,9 +126,199 @@ const Contact: React.FC = () => {
                         </h3>
                     </div>
                 </div>
+
+                {/* Contact Form Section */}
+                <div className="max-w-4xl mx-auto">
+                    <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+                        <div className="grid grid-cols-1 md:grid-cols-2">
+                            <div className="p-8 md:p-12 bg-brand-dark text-white relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-brand-neonBlue rounded-full blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+                                <div className="relative z-10">
+                                    <h2 className="text-3xl font-black uppercase mb-6">Send us a <span className="text-brand-neonBlue">Message</span></h2>
+                                    <p className="text-slate-400 mb-8">
+                                        Have a question about our wash packages, FastPass club, or just want to say hi? Drop us a line and we'll get back to you as soon as possible.
+                                    </p>
+
+                                    <div className="space-y-6">
+                                        <div className="flex items-center gap-4">
+                                            <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-brand-neonBlue">
+                                                <Mail size={20} />
+                                            </div>
+                                            <span className="text-slate-300">info@cavewave.com</span>
+                                        </div>
+                                        <div className="flex items-center gap-4">
+                                            <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-brand-neonPink">
+                                                <Phone size={20} />
+                                            </div>
+                                            <span className="text-slate-300">(903) 563-7774</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="p-8 md:p-12">
+                                <ContactForm />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
+
+const ContactForm: React.FC = () => {
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus('loading');
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ name: '', email: '', subject: '', message: '' });
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            setStatus('error');
+        }
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    if (status === 'success') {
+        return (
+            <div className="text-center py-10">
+                <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6 text-green-500">
+                    <Check size={40} />
+                </div>
+                <h3 className="text-2xl font-black uppercase text-slate-900 dark:text-white mb-4">Message Sent!</h3>
+                <p className="text-slate-600 dark:text-slate-400 mb-8">
+                    Thanks for reaching out! We've received your message and will respond shortly.
+                </p>
+                <button
+                    onClick={() => setStatus('idle')}
+                    className="text-brand-neonBlue font-bold uppercase tracking-wider hover:underline"
+                >
+                    Send another message
+                </button>
+            </div>
+        );
+    }
+
+    const inputClasses = "w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-neonBlue focus:border-transparent transition-all";
+    const labelClasses = "block text-xs font-bold uppercase tracking-widest text-slate-500 mb-2 ml-1";
+
+    return (
+        <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+                <label className={labelClasses}>Your Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="John Doe"
+                    className={inputClasses}
+                />
+            </div>
+            <div>
+                <label className={labelClasses}>Email Address</label>
+                <input
+                    type="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="john@example.com"
+                    className={inputClasses}
+                />
+            </div>
+            <div>
+                <label className={labelClasses}>Subject</label>
+                <input
+                    type="text"
+                    name="subject"
+                    required
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="How can we help?"
+                    className={inputClasses}
+                />
+            </div>
+            <div>
+                <label className={labelClasses}>Message</label>
+                <textarea
+                    name="message"
+                    required
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us more..."
+                    className={inputClasses}
+                ></textarea>
+            </div>
+
+            {status === 'error' && (
+                <p className="text-red-500 text-sm font-bold">
+                    Oops! Something went wrong. Please try again.
+                </p>
+            )}
+
+            <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="w-full py-4 bg-gradient-to-r from-brand-neonBlue to-brand-neonPurple text-white font-black uppercase tracking-widest rounded-xl hover:shadow-lg hover:shadow-brand-neonBlue/30 transition-all disabled:opacity-50 flex items-center justify-center gap-3"
+            >
+                {status === 'loading' ? (
+                    <>
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        <span>Sending...</span>
+                    </>
+                ) : (
+                    <span>Send Message</span>
+                )}
+            </button>
+        </form>
+    );
+};
+
+const Check: React.FC<{ size?: number }> = ({ size = 24 }) => (
+    <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+);
 
 export default Contact;
