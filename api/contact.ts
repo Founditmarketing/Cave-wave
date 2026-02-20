@@ -43,8 +43,8 @@ export default async function handler(req, res) {
     `;
 
         const { data, error } = await resend.emails.send({
-            from: 'onboarding@resend.dev',
-            to: 'kylan@founditmarketing.com',
+            from: 'system@cavewavecarwash.com',
+            to: 'info@cavewave.com',
             replyTo: email,
             subject: emailSubject,
             html: htmlContent,
