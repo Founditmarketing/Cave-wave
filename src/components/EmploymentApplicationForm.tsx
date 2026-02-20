@@ -26,7 +26,7 @@ const EmploymentApplicationForm: React.FC = () => {
 
     const [resume, setResume] = useState<File | null>(null);
     const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: 0 });
-    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [errors, setErrors] = useState<Record<string, string>>({});
 
     // --- CAPTCHA Logic ---
@@ -115,14 +115,30 @@ const EmploymentApplicationForm: React.FC = () => {
             return;
         }
 
-        // Mock Submission
-        setSubmissionStatus('success');
-        console.log('Form Submitted:', { ...formData, resume });
+        // Real Submission
+        setSubmissionStatus('loading');
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    name: `${formData.firstName} ${formData.lastName}`,
+                    type: 'careers'
+                }),
+            });
 
-        // Reset form after success (optional, keeping it simple for now)
-        // setFormData(...initialState);
-        // setResume(null);
-        // generateCaptcha();
+            if (response.ok) {
+                setSubmissionStatus('success');
+            } else {
+                setSubmissionStatus('error');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            setSubmissionStatus('error');
+        }
     };
 
     if (submissionStatus === 'success') {
@@ -332,8 +348,8 @@ const EmploymentApplicationForm: React.FC = () => {
                             onDrop={handleDrop}
                             onDragOver={handleDragOver}
                             className={`relative border-2 border-dashed rounded-xl p-8 text-center transition-all ${errors.resume
-                                    ? 'border-red-500 bg-red-50 dark:bg-red-900/10'
-                                    : 'border-slate-300 dark:border-slate-700 hover:border-brand-neonPink dark:hover:border-brand-neonPink bg-slate-50 dark:bg-slate-800/50'
+                                ? 'border-red-500 bg-red-50 dark:bg-red-900/10'
+                                : 'border-slate-300 dark:border-slate-700 hover:border-brand-neonPink dark:hover:border-brand-neonPink bg-slate-50 dark:bg-slate-800/50'
                                 }`}
                         >
                             {!resume ? (
@@ -404,9 +420,17 @@ const EmploymentApplicationForm: React.FC = () => {
 
                         <button
                             type="submit"
-                            className="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-brand-neonPurple to-brand-neonPink text-white text-lg font-black uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-brand-neonPink/30 hover:-translate-y-1 transition-all duration-300"
+                            disabled={submissionStatus === 'loading'}
+                            className="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-brand-neonPurple to-brand-neonPink text-white text-lg font-black uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-brand-neonPink/30 hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-3"
                         >
-                            Submit
+                            {submissionStatus === 'loading' ? (
+                                <>
+                                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                                    <span>Sending...</span>
+                                </>
+                            ) : (
+                                <span>Submit</span>
+                            )}
                         </button>
                     </div>
                 </div>
