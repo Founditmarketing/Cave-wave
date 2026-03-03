@@ -164,7 +164,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
           {/* "Menu items close to the top bar... as logo shrinks they look more equal" */}
           {/* We align them to the top or center? Usually center is best for navbar. */}
           {/* "Menu items closer to the light and dark mode" -> justify-end with small gap? */}
-          <div className="hidden lg:flex items-center gap-8 pr-4 self-start mt-3" ref={dropdownRef}>
+          <div className="hidden lg:flex items-center gap-6 pr-4 self-start mt-3 whitespace-nowrap" ref={dropdownRef}>
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
                 {link.subItems ? (
