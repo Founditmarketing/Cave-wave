@@ -1,0 +1,14 @@
+# Cave Wave Car Wash
+
+> Cave Wave Car Wash provides a premium car wash experience with neon aesthetics, multiple wash packages, and easy location finding.
+
+## Core Pages
+- [Home](https://www.cavewavecarwash.com/): The main landing page displaying our neon car wash experience, monthly membership options, vacuum detail stations, and videos.
+- [Wash Packages](https://www.cavewavecarwash.com/packages): Detailed monthly plans (Tidal Wave, Mega Wave, Splash Wave, Basic Wave) for unlimited washes.
+- [Locations](https://www.cavewavecarwash.com/locations): Interactive list of our car wash locations (Paris, Longview, and Texarkana) with addresses, hours, and map links.
+- [Fast Pass Club](https://www.cavewavecarwash.com/fastpass): Manage, update, or cancel your Fast Pass unlimited wash club membership.
+- [Careers](https://www.cavewavecarwash.com/careers): Learn about job opportunities at Cave Wave and apply online.
+- [Contact Support](https://www.cavewavecarwash.com/contact): Get in touch with our team for support or inquiries.
+- [Reviews](https://www.cavewavecarwash.com/reviews): Customer testimonials and links to leave Google reviews.
+- [Buy Now](https://www.cavewavecarwash.com/buy-now): Direct portal to purchase unlimited wash packages online.
+- [Privacy Policy](https://www.cavewavecarwash.com/privacy-policy): Privacy and data handling practices at Cave Wave Car Wash.
