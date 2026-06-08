@@ -1,28 +1,73 @@
-# Cave Wave
-> Professional services provider
+# Cave Wave Car Wash
+> Professional car wash services across East Texas
 
-Cave Wave is a professional service provider offering expert solutions and reliable service to clients.
+Cave Wave Car Wash provides expert professional car wash services and solutions. We are committed to delivering high-quality, reliable service to our clients at every visit. Our state-of-the-art facilities feature the latest in automatic tunnel wash technology, unlimited wash memberships, and premium detailing services.
 
 ## Services
-- Professional Services
-- Expert Solutions
-- Consultation
+- Express Exterior Wash
+- Fast Pass Unlimited Wash Club
+- Premium Detail Station
+- Free Vacuum & Mat Cleaning
+- Interior Detailing
+- Hand Waxing & Clay Bar Treatments
+
+## Locations
+
+### Longview, TX
+- Address: 918 West Loop 281, Longview, TX 75604
+- Phone: (903) 305-5365
+- Hours: Monday–Sunday 8:00 AM – 8:00 PM
+- Features: Express Wash, Free Vacuums, Detailing Kits
+
+### Texarkana, TX
+- Address: 2705 Richmond Road, Texarkana, TX 75503
+- Phone: (903) 733-1628
+- Hours: Monday–Sunday 8:00 AM – 8:00 PM
+- Features: State-of-the-art Tunnel, Member Lane, Free Air
+
+### Paris, TX
+- Address: 4210 Lamar Ave, Paris, TX 75460
+- Phone: (806) 778-2602
+- Hours: Monday–Sunday 8:00 AM – 7:00 PM
+- Features: Automatic Tunnel, Free Vacuums, Mat Cleaners
 
 ## Service Area
-Local area and surrounding regions
+Serving communities across East Texas including Longview, Texarkana, Paris, and surrounding areas.
 
 ## Contact
-- Phone: 
-- Address: 
-- Website: https://cave-wave-6jomceq6b-foundit-marketing.vercel.app
+- Phone (Longview): (903) 305-5365
+- Phone (Texarkana): (903) 733-1628
+- Phone (Paris): (806) 778-2602
+- Website: https://www.cavewavecarwash.com
 
 ## Key Pages
-- Home(/): Professional services and expert solutions homepage
+- Home(/): Professional car wash services and expert solutions
+- Packages(/packages): Wash packages and pricing
+- Locations(/locations): All Cave Wave locations
+- Fast Pass(/fastpass): Unlimited wash membership club
+- Contact(/contact): Get a free quote
+- Careers(/careers): Job opportunities
 
 ## About
-Cave Wave provides professional services with a focus on quality and reliability. Our experienced team delivers expert solutions tailored to client needs.
+Cave Wave Car Wash is a professional car wash company dedicated to providing expert solutions across East Texas. We are fully licensed and insured, ensuring our clients receive reliable, high-quality service they can trust. Our experienced team operates state-of-the-art tunnel wash systems designed to handle vehicles of all sizes while protecting your vehicle's finish.
 
 ## Frequently Asked Questions
-- What services do you offer? We provide comprehensive professional services and expert solutions.
-- How can I contact you? You can reach us through our website contact form or by phone.
-- Are you licensed and insured? Yes, we are fully licensed and insured for your protection.
+
+**What wash packages do you offer?**
+We offer four FastPass membership packages: Basic Wave ($24.99/month), Splash Wave ($29.99/month), Mega Wave ($39.99/month), and Tidal Wave ($49.99/month). Single washes are also available.
+
+**How does the FastPass membership work?**
+FastPass uses license plate recognition technology for contactless entry to our express member lanes. No tags or stickers needed. Wash unlimited times per month at any location.
+
+**What's included with every wash?**
+All washes include free access to our detailing stations with Armor All, glass cleaner, fragrances, air blowers, vacuums, and microfiber rags.
+
+**What are your hours?**
+Longview and Texarkana: Monday–Sunday 8AM–8PM. Paris: Monday–Sunday 8AM–7PM.
+
+**Do you offer single washes?**
+Yes, single washes are available at all locations, but our unlimited monthly plans offer the best value.
+
+**How do I contact you?**
+Longview: (903) 305-5365. Texarkana: (903) 733-1628. Paris: (806) 778-2602. Or visit www.cavewavecarwash.com.
+

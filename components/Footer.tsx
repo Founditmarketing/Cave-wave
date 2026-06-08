@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                 <h5 className="font-bold text-white text-sm uppercase tracking-wide mb-1">Paris</h5>
                 <p className="text-slate-400 text-sm">
                   4210 Lamar Ave, Paris, TX 75460<br />
-                  (903) 563-7774
+                  <a href="tel:9035637774" className="hover:text-brand-neonBlue transition-colors">(903) 563-7774</a>
                 </p>
               </div>
 
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 <h5 className="font-bold text-white text-sm uppercase tracking-wide mb-1">Longview</h5>
                 <p className="text-slate-400 text-sm">
                   918 West Loop 281, Longview, TX 75604<br />
-                  (903) 305-5365
+                  <a href="tel:9033055365" className="hover:text-brand-neonBlue transition-colors">(903) 305-5365</a>
                 </p>
               </div>
 
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                 <h5 className="font-bold text-white text-sm uppercase tracking-wide mb-1">Texarkana</h5>
                 <p className="text-slate-400 text-sm">
                   2705 Richmond Road, Texarkana, TX 75503<br />
-                  (430) 200-0250
+                  <a href="tel:4302000250" className="hover:text-brand-neonBlue transition-colors">(430) 200-0250</a>
                 </p>
               </div>
             </div>
@@ -76,7 +76,8 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
-          &copy; 2026 Cave Wave Car Wash, all rights reserved.
+          <p>&copy; 2026 Cave Wave Car Wash, all rights reserved.</p>
+          <p className="mt-2 text-slate-400 font-medium">Licensed &amp; Insured</p>
         </div>
       </div>
     </footer>

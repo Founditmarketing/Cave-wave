@@ -32,4 +32,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://cave-wave-6jomceq6b-foundit-marketing.vercel.app/sitemap.xml
+Sitemap: https://www.cavewavecarwash.com/sitemap.xml

@@ -124,10 +124,13 @@ const Hero: React.FC<HeroProps> = ({ triggerAnimation }) => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-              <Link to="/packages" className="px-10 py-4 rounded-full font-black uppercase tracking-widest text-base text-white bg-gradient-to-r from-brand-neonBlue via-brand-neonPink to-brand-neonBlue bg-[length:200%_auto] hover:bg-right transition-all duration-500 shadow-[0_0_20px_rgba(34,211,238,0.5)] hover:shadow-[0_0_30px_rgba(232,121,249,0.6)] transform hover:-translate-y-1 w-full sm:w-auto text-center">
+              <Link to="/contact" className="px-10 py-4 rounded-full font-black uppercase tracking-widest text-base text-white bg-gradient-to-r from-brand-neonBlue via-brand-neonPink to-brand-neonBlue bg-[length:200%_auto] hover:bg-right transition-all duration-500 shadow-[0_0_20px_rgba(34,211,238,0.5)] hover:shadow-[0_0_30px_rgba(232,121,249,0.6)] transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                Get a Free Quote
+              </Link>
+              <Link to="/packages" className="px-10 py-4 rounded-full border-2 border-white text-white font-black uppercase tracking-widest text-base hover:bg-white hover:text-brand-dark transition-all duration-300 w-full sm:w-auto text-center">
                 View Packages
               </Link>
-              <Link to="/locations" className="px-10 py-4 rounded-full border-2 border-white text-white font-black uppercase tracking-widest text-base hover:bg-white hover:text-brand-dark transition-all duration-300 w-full sm:w-auto text-center">
+              <Link to="/locations" className="px-10 py-4 rounded-full border-2 border-white/50 text-white/80 font-black uppercase tracking-widest text-base hover:bg-white hover:text-brand-dark hover:border-white transition-all duration-300 w-full sm:w-auto text-center">
                 Find Location
               </Link>
             </div>

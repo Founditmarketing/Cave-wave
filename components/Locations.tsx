@@ -128,6 +128,22 @@ const Locations: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* Google Maps Embed */}
+        <div className="mt-16 max-w-7xl mx-auto">
+          <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-100 dark:border-slate-800">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.5!2d-94.74!3d32.50!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCave+Wave+Car+Wash!5e0!3m2!1sen!2sus!4v1700000000000"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Cave Wave Car Wash Locations"
+            ></iframe>
+          </div>
+        </div>
       </div>
     </section>
   );
