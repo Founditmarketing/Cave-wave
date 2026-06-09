@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                                 </p>
                                 <p className="flex items-center gap-3">
                                     <Phone size={18} className="shrink-0 text-brand-neonPink" />
-                                    <span>{loc.phone}</span>
+                                    <a href={`tel:${loc.phone.replace(/\D/g, '')}`} className="hover:text-brand-neonBlue transition-colors">{loc.phone}</a>
                                 </p>
                                 <p className="flex items-center gap-3">
                                     <Clock size={18} className="shrink-0 text-brand-neonPink" />
@@ -153,7 +153,7 @@ const Contact: React.FC = () => {
                                             <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-brand-neonPink">
                                                 <Phone size={20} />
                                             </div>
-                                            <span className="text-slate-300">(903) 563-7774</span>
+                                            <a href="tel:9035637774" className="text-slate-300 hover:text-brand-neonBlue transition-colors">(903) 563-7774</a>
                                         </div>
                                     </div>
                                 </div>
