@@ -62,6 +62,9 @@ const FastPassInfo: React.FC = () => {
                 src="/carwash.jpg"
                 alt="Cave Wave Car Wash Tunnel"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
+                width={600}
+                height={450}
               />
 
               {/* Overlay Text */}

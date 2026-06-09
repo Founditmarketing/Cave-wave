@@ -33,8 +33,11 @@ const Locations: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent z-10" />
                 <img
                   src={loc.image}
-                  alt={loc.city}
+                  alt={`Cave Wave Car Wash ${loc.city} location`}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width={400}
+                  height={300}
                 />
 
                 {/* Status Badge */}

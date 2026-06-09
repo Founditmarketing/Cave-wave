@@ -33,6 +33,9 @@ const QRCodeCTA: React.FC = () => {
                     src="/text_club_qr_code.jpg"
                     alt="Join our text club QR code"
                     className="w-full h-auto object-contain"
+                    loading="lazy"
+                    width={200}
+                    height={200}
                   />
                 </a>
                 <p className="text-center mt-4 font-bold text-brand-dark uppercase tracking-widest text-sm">Scan Me</p>

@@ -154,9 +154,11 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
           <Link to="/" className={`flex items-center gap-2 group pl-[10px] self-center ${isScrolled ? '' : 'pt-2 mt-2'}`}>
             <img
               src="/CAVEWAVELOGO_2.png"
-              alt="Cave Wave"
+              alt="Cave Wave Car Wash"
               // Mobile: h-14 (was h-20). Desktop: h-20 md:h-24.
               className={`w-auto transition-all duration-500 ease-in-out ${isScrolled ? 'h-12' : 'h-14 sm:h-20 md:h-24'} brightness-100 invert-0`}
+              width={240}
+              height={96}
             />
           </Link>
 
@@ -244,7 +246,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
           {/* Menu Content */}
           <div className="flex-1 overflow-y-auto pt-24 pb-12 px-6 flex flex-col items-center gap-5 w-full">
             {/* Logo in Menu (Optional, puts brand at top) */}
-            <img src="/CAVEWAVELOGO_2.png" alt="Cave Wave" className="h-16 w-auto mb-4" />
+            <img src="/CAVEWAVELOGO_2.png" alt="Cave Wave Car Wash" className="h-16 w-auto mb-4" loading="lazy" width={160} height={64} />
 
             {navLinks.map((link) => (
               <div key={link.name} className="w-full flex flex-col items-center border-b border-white/10 pb-3 last:border-0">

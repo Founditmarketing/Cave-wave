@@ -52,7 +52,7 @@ const SimpleLoadingScreen: React.FC<SimpleLoadingScreenProps> = ({ isVisible }) 
                     <img
                         src="/CAVEWAVELOGO_2.png"
                         alt="Cave Wave"
-                        className="w-full h-auto mb-4"
+                        className="w-full h-auto mb-4" width={256} height={64}
                     />
                     <p className="text-brand-dark font-black uppercase tracking-widest text-xs animate-pulse">
                         PREPARING THE ULTIMATE SHINE...

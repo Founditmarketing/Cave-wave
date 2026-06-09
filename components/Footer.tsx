@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <img src="/CAVEWAVELOGO_2.png" alt="Cave Wave" className="h-12 w-auto" />
+              <img src="/CAVEWAVELOGO_2.png" alt="Cave Wave Car Wash" className="h-12 w-auto" loading="lazy" width={120} height={48} />
             </div>
             {/* Locations List */}
             <div className="space-y-6 mb-6">

@@ -63,8 +63,12 @@ const Hero: React.FC<HeroProps> = ({ triggerAnimation }) => {
           >
             <img
               src={slide.image}
-              alt="Background"
+              alt={`Cave Wave Car Wash - Slide ${index + 1}`}
               className="w-full h-full object-cover"
+              width={1920}
+              height={1080}
+              fetchPriority={index === 0 ? 'high' : undefined}
+              loading={index === 0 ? undefined : 'lazy'}
             />
           </div>
         ))}
@@ -96,7 +100,7 @@ const Hero: React.FC<HeroProps> = ({ triggerAnimation }) => {
                 <div className="bg-white rounded-xl p-3 shadow-inner mb-4 relative overflow-hidden group-hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-shadow duration-500">
                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none transform -translate-x-full group-hover:translate-x-full" style={{ transitionDuration: '1s' }}></div>
                   <a href="https://cavewavecw.app.rinsed.co/contact_forms/67" target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
-                    <img src="/text_club_qr_code.jpg" alt="Join the Club" className="w-full h-auto object-contain" />
+                    <img src="/text_club_qr_code.jpg" alt="Join the Cave Wave text club QR code" className="w-full h-auto object-contain" loading="lazy" width={200} height={200} />
                   </a>
                 </div>
 
