@@ -15,7 +15,7 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ triggerAnimation }) => {
     return (
         <>
-        <SEO title="Cave Wave Car Wash | Premium Auto Wash Services in Texas" description="Cave Wave Car Wash offers premium auto wash services with unlimited monthly plans, express lanes, and free detailing stations in Paris, Longview & Texarkana, TX." canonical="/" />
+        <SEO title="Cave Wave Car Wash | Premium Auto Wash Services in Texas" description="Experience the ultimate car wash at Cave Wave! Unlimited monthly wash plans from $24.99, express lanes, free detailing stations, and LPR technology in Paris, Longview & Texarkana, TX." canonical="/" />
         <>
             <Hero triggerAnimation={triggerAnimation} />
             <Packages />

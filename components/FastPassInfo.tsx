@@ -70,7 +70,7 @@ const FastPassInfo: React.FC = () => {
               {/* Overlay Text */}
               <div className="absolute bottom-6 left-6 z-20">
                 <p className="text-white/80 font-bold tracking-widest text-xs uppercase mb-1">Experience The Shine</p>
-                <h4 className="text-white font-black text-2xl uppercase italic">Cave Wave</h4>
+                <span className="text-white font-black text-2xl uppercase italic">Cave Wave</span>
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@ const FeatureRow: React.FC<{ icon: React.ReactNode, title: string, desc: string 
       {icon}
     </div>
     <div>
-      <h4 className="text-lg font-bold uppercase text-slate-900 dark:text-white mb-1 group-hover:text-brand-neonBlue transition-colors">{title}</h4>
+      <h3 className="text-lg font-bold uppercase text-slate-900 dark:text-white mb-1 group-hover:text-brand-neonBlue transition-colors">{title}</h3>
       <p className="text-slate-600 dark:text-slate-400 text-sm">{desc}</p>
     </div>
   </div>
