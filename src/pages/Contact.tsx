@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
                                 <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeLocation === loc.id ? 'bg-brand-neonBlue text-white' : 'bg-slate-100 dark:bg-slate-800 text-brand-neonBlue'}`}>
                                     <MapPin size={24} />
                                 </div>
-                                <h3 className="text-2xl font-black uppercase dark:text-white text-slate-900">{loc.city}</h3>
+                                <h2 className="text-2xl font-black uppercase dark:text-white text-slate-900">{loc.city}</h2>
                             </div>
 
                             <div className="space-y-4 text-slate-600 dark:text-slate-400">

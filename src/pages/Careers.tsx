@@ -46,7 +46,7 @@ const Careers: React.FC = () => {
                             <div className="w-16 h-16 mx-auto bg-brand-neonBlue/10 dark:bg-brand-neonBlue/20 rounded-full flex items-center justify-center text-brand-neonBlue mb-6">
                                 {val.icon}
                             </div>
-                            <h3 className="text-xl font-black uppercase dark:text-white text-slate-900 mb-3">{val.title}</h3>
+                            <h2 className="text-xl font-black uppercase dark:text-white text-slate-900 mb-3">{val.title}</h2>
                             <p className="text-slate-600 dark:text-slate-400">{val.desc}</p>
                         </div>
                     ))}

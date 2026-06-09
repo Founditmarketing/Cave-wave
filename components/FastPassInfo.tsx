@@ -18,7 +18,7 @@ const FastPassInfo: React.FC = () => {
           {/* Left Content - Widened from max-w-xl to max-w-2xl to let it breathe */}
           <div className="lg:w-1/2 space-y-8 max-w-2xl">
             <div>
-              <h3 className="text-brand-neonBlue font-bold tracking-[0.2em] uppercase text-sm mb-4">Join The Club</h3>
+              <span className="text-brand-neonBlue font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Join The Club</span>
               <h2 className="text-5xl md:text-6xl font-black uppercase leading-[0.9]">
                 <span className="text-slate-900 dark:text-white block mb-2 transition-colors">Get The</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-neonBlue to-brand-neonPink">FastPass</span>

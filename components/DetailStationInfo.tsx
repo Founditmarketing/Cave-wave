@@ -9,7 +9,7 @@ const DetailStationInfo: React.FC = () => {
                     {/* Content */}
                     <div className="lg:w-1/2 space-y-8 max-w-2xl">
                         <div>
-                            <h3 className="text-brand-neonPink font-bold tracking-[0.2em] uppercase text-sm mb-4">Free Amenities</h3>
+                            <span className="text-brand-neonPink font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Free Amenities</span>
                             <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight text-slate-900 dark:text-white mb-6">
                                 Detailing <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-neonBlue to-brand-neonPink">Stations</span>
                             </h2>

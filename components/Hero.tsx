@@ -105,7 +105,7 @@ const Hero: React.FC<HeroProps> = ({ triggerAnimation }) => {
                 </div>
 
                 <div className="text-center">
-                  <h3 className="text-white font-black uppercase tracking-wider text-lg mb-1">Join The Club</h3>
+                  <span className="text-white font-black uppercase tracking-wider text-lg mb-1 block">Join The Club</span>
                   <p className="text-brand-neonBlue text-[10px] font-bold uppercase tracking-widest">Instant Access</p>
                 </div>
               </div>
