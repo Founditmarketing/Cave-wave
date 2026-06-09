@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useEffect } from 'react';
 
 const PrivacyPolicy: React.FC = () => {
@@ -6,6 +7,8 @@ const PrivacyPolicy: React.FC = () => {
     }, []);
 
     return (
+        <>
+        <SEO title="Privacy Policy | Cave Wave Car Wash" description="Cave Wave Car Wash privacy policy. How we protect your personal information and data when you use our car wash services and website." canonical="/privacy-policy" />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark transition-colors duration-300">
             <div className="container mx-auto px-4 py-12">
                 <div className="max-w-4xl mx-auto">
@@ -71,6 +74,7 @@ const PrivacyPolicy: React.FC = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

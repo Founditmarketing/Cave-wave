@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useEffect } from 'react';
 import { Star, Quote, ThumbsUp } from 'lucide-react';
 
@@ -52,6 +53,8 @@ const ReviewsPage: React.FC = () => {
     ];
 
     return (
+        <>
+        <SEO title="Customer Reviews | Cave Wave Car Wash Texas" description="Read what customers say about Cave Wave Car Wash. 4.8-star rated across our Paris, Longview & Texarkana, Texas locations." canonical="/reviews" />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-16">
@@ -111,6 +114,7 @@ const ReviewsPage: React.FC = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

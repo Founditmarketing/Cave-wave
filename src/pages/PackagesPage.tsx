@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useEffect } from 'react';
 import { Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -12,6 +13,8 @@ const PackagesPage: React.FC = () => {
     // Packages data is now imported from ../data/packages
 
     return (
+        <>
+        <SEO title="Car Wash Packages & Pricing | Cave Wave Car Wash Texas" description="Choose from 4 unlimited car wash packages starting at $24.99/month. Basic Wave, Splash Wave, Mega Wave & Tidal Wave plans in Texas." canonical="/packages" />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-10 lg:mb-16">
@@ -96,6 +99,7 @@ const PackagesPage: React.FC = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

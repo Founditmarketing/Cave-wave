@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useEffect } from 'react';
 import { Tag, Car, AlertCircle, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -8,6 +9,8 @@ const FastPass: React.FC = () => {
     }, []);
 
     return (
+        <>
+        <SEO title="FastPass Membership | Cave Wave Car Wash | Unlimited Washes Texas" description="Join Cave Wave FastPass for unlimited monthly car washes starting at $24.99. LPR technology, express lanes, and premium detailing in Texas." canonical="/fastpass" />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 {/* Header Section */}
@@ -108,6 +111,7 @@ const FastPass: React.FC = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useEffect } from 'react';
 import { Briefcase, Users, Zap } from 'lucide-react';
 import EmploymentApplicationForm from '../components/EmploymentApplicationForm';
@@ -26,6 +27,8 @@ const Careers: React.FC = () => {
     ];
 
     return (
+        <>
+        <SEO title="Car Wash Jobs & Careers | Cave Wave Car Wash Texas" description="Join the Cave Wave Car Wash team! Hiring energetic team members across our Texas locations. Apply for car wash jobs in Paris, Longview & Texarkana." canonical="/careers" />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-16">
@@ -54,6 +57,7 @@ const Careers: React.FC = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

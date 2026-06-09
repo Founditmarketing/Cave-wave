@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useEffect, useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Navigation } from 'lucide-react';
 
@@ -38,6 +39,8 @@ const Contact: React.FC = () => {
     const activeMap = locations.find(l => l.id === activeLocation)?.embedUrl;
 
     return (
+        <>
+        <SEO title="Contact Cave Wave Car Wash | Longview, Paris & Texarkana TX" description="Contact Cave Wave Car Wash at our Paris, Longview, or Texarkana locations. Call (903) 305-5365 for premium car wash services and FastPass memberships." canonical="/contact" />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-16">
@@ -164,6 +167,7 @@ const Contact: React.FC = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
