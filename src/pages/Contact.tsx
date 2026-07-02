@@ -185,12 +185,17 @@ const ContactForm: React.FC = () => {
         setStatus('loading');
 
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch('https://www.founditos.com/api/contact-form/d8916a40-8ccb-4ae0-be86-bdfa3d5b0a0e', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: '',
+                    message: `Subject: ${formData.subject}\n\n${formData.message}`,
+                }),
             });
 
             if (response.ok) {
