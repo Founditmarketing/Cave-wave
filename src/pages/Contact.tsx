@@ -2,6 +2,15 @@ import SEO from '../components/SEO';
 import React, { useEffect, useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Navigation } from 'lucide-react';
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cavewavecarwash.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.cavewavecarwash.com/contact" }
+    ]
+};
+
 const Contact: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -41,6 +50,7 @@ const Contact: React.FC = () => {
     return (
         <>
         <SEO title="Contact Cave Wave Car Wash | Longview, Paris & Texarkana TX" description="Contact Cave Wave Car Wash at our Paris, Longview, or Texarkana locations. Call (903) 305-5365 for premium car wash services and FastPass memberships." canonical="/contact" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-16">

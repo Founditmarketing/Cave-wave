@@ -1,6 +1,15 @@
 import SEO from '../components/SEO';
 import React, { useEffect } from 'react';
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cavewavecarwash.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Buy Now", "item": "https://www.cavewavecarwash.com/buy-now" }
+    ]
+};
+
 const BuyNow: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -9,6 +18,7 @@ const BuyNow: React.FC = () => {
     return (
         <>
         <SEO title="Buy a Wash | Cave Wave Car Wash Texas" description="Purchase a single car wash or sign up for unlimited FastPass membership at Cave Wave Car Wash in Texas." canonical="/buy-now" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-12">

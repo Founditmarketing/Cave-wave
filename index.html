@@ -13,24 +13,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>Cave Wave Car Wash | Professional Car Wash Services in East Texas</title>
-  <meta name="description" content="Cave Wave Car Wash provides professional car wash services with unlimited monthly plans, express lanes, and free detailing stations across East Texas." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.cavewavecarwash.com/" />
+  <!-- title, description, robots, canonical, Open Graph, and Twitter tags below are a fallback
+       for crawlers that don't execute JavaScript (Facebook, Twitter/X, Slack, iMessage, etc).
+       src/components/SEO.tsx (react-helmet-async) sets the real per-route values on mount; the
+       [data-default-seo] tags here are stripped by index.tsx right before React mounts, so
+       JS-rendering bots (Google) and hydrated users only ever see one canonical/OG set. -->
+  <title data-default-seo>Cave Wave Car Wash | Professional Car Wash Services in East Texas</title>
+  <meta data-default-seo name="description" content="Cave Wave Car Wash provides professional car wash services with unlimited monthly plans, express lanes, and free detailing stations across East Texas." />
+  <meta data-default-seo name="robots" content="index, follow" />
+  <link data-default-seo rel="canonical" href="https://www.cavewavecarwash.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Cave Wave Car Wash | Premium Auto Wash Services in Texas" />
-  <meta property="og:description" content="Cave Wave Car Wash offers premium auto wash services with unlimited monthly plans, express lanes, and free detailing stations. Serving Paris, Longview & Texarkana, TX." />
-  <meta property="og:image" content="https://www.cavewavecarwash.com/cavewavesign.JPG" />
-  <meta property="og:url" content="https://www.cavewavecarwash.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Cave Wave Car Wash" />
+  <meta data-default-seo property="og:title" content="Cave Wave Car Wash | Premium Auto Wash Services in Texas" />
+  <meta data-default-seo property="og:description" content="Cave Wave Car Wash offers premium auto wash services with unlimited monthly plans, express lanes, and free detailing stations. Serving Paris, Longview & Texarkana, TX." />
+  <meta data-default-seo property="og:image" content="https://www.cavewavecarwash.com/cavewavesign.JPG" />
+  <meta data-default-seo property="og:url" content="https://www.cavewavecarwash.com/" />
+  <meta data-default-seo property="og:type" content="website" />
+  <meta data-default-seo property="og:site_name" content="Cave Wave Car Wash" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cave Wave Car Wash | Premium Auto Wash Services in Texas" />
-  <meta name="twitter:description" content="Cave Wave Car Wash offers premium auto wash services with unlimited monthly plans, express lanes, and free detailing stations. Serving Paris, Longview & Texarkana, TX." />
-  <meta name="twitter:image" content="https://www.cavewavecarwash.com/cavewavesign.JPG" />
+  <meta data-default-seo name="twitter:card" content="summary_large_image" />
+  <meta data-default-seo name="twitter:title" content="Cave Wave Car Wash | Premium Auto Wash Services in Texas" />
+  <meta data-default-seo name="twitter:description" content="Cave Wave Car Wash offers premium auto wash services with unlimited monthly plans, express lanes, and free detailing stations. Serving Paris, Longview & Texarkana, TX." />
+  <meta data-default-seo name="twitter:image" content="https://www.cavewavecarwash.com/cavewavesign.JPG" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -69,8 +74,8 @@
         ],
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "127"
+          "ratingValue": "4.2",
+          "reviewCount": "532"
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",

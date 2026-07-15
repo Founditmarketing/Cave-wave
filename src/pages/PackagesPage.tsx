@@ -4,6 +4,14 @@ import { Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { packages } from '../data/packages'; // Import centralized data
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cavewavecarwash.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Packages", "item": "https://www.cavewavecarwash.com/packages" }
+    ]
+};
 
 const PackagesPage: React.FC = () => {
     useEffect(() => {
@@ -15,6 +23,7 @@ const PackagesPage: React.FC = () => {
     return (
         <>
         <SEO title="Car Wash Packages & Pricing | Cave Wave Car Wash Texas" description="Choose from 4 unlimited car wash packages starting at $24.99/month. Basic Wave, Splash Wave, Mega Wave & Tidal Wave plans in Texas." canonical="/packages" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-10 lg:mb-16">

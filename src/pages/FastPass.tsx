@@ -3,6 +3,52 @@ import React, { useEffect } from 'react';
 import { Tag, Car, AlertCircle, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+const faqs = [
+    {
+        q: "What wash packages do you offer?",
+        a: "We offer four FastPass membership packages: Basic Wave ($24.99/month), Splash Wave ($29.99/month), Mega Wave ($39.99/month), and Tidal Wave ($49.99/month). Single washes are also available."
+    },
+    {
+        q: "How does the FastPass membership work?",
+        a: "FastPass uses license plate recognition technology for contactless entry to our express member lanes. No tags or stickers needed. Wash unlimited times per month at any location."
+    },
+    {
+        q: "What's included with every wash?",
+        a: "All washes include free access to our detailing stations with Armor All, glass cleaner, fragrances, air blowers, vacuums, and microfiber rags."
+    },
+    {
+        q: "What are your hours?",
+        a: "Longview and Texarkana: Monday–Sunday 8AM–8PM. Paris: Monday–Sunday 8AM–7PM."
+    },
+    {
+        q: "Do you offer single washes?",
+        a: "Yes, single washes are available at all locations, but our unlimited monthly plans offer the best value."
+    },
+    {
+        q: "How do I contact you?",
+        a: "Longview: (903) 305-5365. Texarkana: (430) 200-0250. Paris: (903) 563-7774. Or visit www.cavewavecarwash.com."
+    }
+];
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((f) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+};
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cavewavecarwash.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Fast Pass Club", "item": "https://www.cavewavecarwash.com/fastpass" }
+    ]
+};
+
 const FastPass: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -11,6 +57,8 @@ const FastPass: React.FC = () => {
     return (
         <>
         <SEO title="FastPass Membership | Cave Wave Car Wash | Unlimited Washes Texas" description="Join Cave Wave FastPass for unlimited monthly car washes starting at $24.99. LPR technology, express lanes, and premium detailing in Texas." canonical="/fastpass" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 {/* Header Section */}
@@ -94,6 +142,19 @@ const FastPass: React.FC = () => {
                         <p className="text-amber-900 dark:text-amber-100 font-medium">
                             We ask that all cancelations be made 3-5 days prior to the next recharge date to allow us time to get it taken care of.
                         </p>
+                    </div>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="max-w-4xl mx-auto mb-16">
+                    <h2 className="text-3xl font-black uppercase text-slate-900 dark:text-white mb-8 text-center">Frequently Asked Questions</h2>
+                    <div className="space-y-6">
+                        {faqs.map((faq, i) => (
+                            <div key={i} className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800">
+                                <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">{faq.q}</h3>
+                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">{faq.a}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
 

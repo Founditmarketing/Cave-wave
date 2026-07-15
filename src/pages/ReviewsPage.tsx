@@ -52,9 +52,29 @@ const ReviewsPage: React.FC = () => {
         }
     ];
 
+    const reviewSchema = textReviews.map((review) => ({
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": { "@type": "AutoWash", "name": "Cave Wave Car Wash" },
+        "author": { "@type": "Person", "name": review.name },
+        "reviewRating": { "@type": "Rating", "ratingValue": review.rating, "bestRating": 5, "worstRating": 1 },
+        "reviewBody": review.text
+    }));
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cavewavecarwash.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://www.cavewavecarwash.com/reviews" }
+        ]
+    };
+
     return (
         <>
-        <SEO title="Customer Reviews | Cave Wave Car Wash Texas" description="Read what customers say about Cave Wave Car Wash. 4.8-star rated across our Paris, Longview & Texarkana, Texas locations." canonical="/reviews" />
+        <SEO title="Customer Reviews | Cave Wave Car Wash Texas" description="Read what customers say about Cave Wave Car Wash. Rated 4.2 stars across our Paris, Longview & Texarkana, Texas locations." canonical="/reviews" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark">
             <div className="container mx-auto px-4 py-12">
                 <div className="text-center mb-16">

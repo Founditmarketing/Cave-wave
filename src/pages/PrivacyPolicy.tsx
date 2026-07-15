@@ -1,6 +1,15 @@
 import SEO from '../components/SEO';
 import React, { useEffect } from 'react';
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cavewavecarwash.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://www.cavewavecarwash.com/privacy-policy" }
+    ]
+};
+
 const PrivacyPolicy: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -9,6 +18,7 @@ const PrivacyPolicy: React.FC = () => {
     return (
         <>
         <SEO title="Privacy Policy | Cave Wave Car Wash" description="Cave Wave Car Wash privacy policy. How we protect your personal information and data when you use our car wash services and website." canonical="/privacy-policy" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <div className="pt-24 min-h-screen bg-slate-50 dark:bg-brand-dark transition-colors duration-300">
             <div className="container mx-auto px-4 py-12">
                 <div className="max-w-4xl mx-auto">

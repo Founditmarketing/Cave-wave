@@ -5,11 +5,12 @@ interface SEOProps {
   description: string;
   canonical?: string;
   ogImage?: string;
+  noIndex?: boolean;
 }
 
 const BASE_URL = 'https://www.cavewavecarwash.com';
 
-export default function SEO({ title, description, canonical, ogImage }: SEOProps) {
+export default function SEO({ title, description, canonical, ogImage, noIndex = false }: SEOProps) {
   const fullTitle = title.includes('Cave Wave') ? title : `${title} | Cave Wave Car Wash`;
   const canonicalUrl = canonical ? `${BASE_URL}${canonical}` : BASE_URL;
   const image = ogImage || `${BASE_URL}/cavewavesign.JPG`;
@@ -18,6 +19,7 @@ export default function SEO({ title, description, canonical, ogImage }: SEOProps
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
       <link rel="canonical" href={canonicalUrl} />
 
       <meta property="og:title" content={fullTitle} />
